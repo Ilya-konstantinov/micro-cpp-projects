@@ -1,3 +1,5 @@
+Для цветов см. [pdf](https://github.com/Ilya-konstantinov/micro-cpp-projects/blob/main/t.pdf)
+
 ## Групповой проект - контрольная работа по программированию 
 
 ### Вступление
