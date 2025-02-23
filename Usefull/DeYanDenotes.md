@@ -63,34 +63,29 @@ void print() const {
 Для этого мы объявляем классы в самом начале с объявлением их методов, но без внутренностей. 
 После расписываем методы отдельно как функции, но с "название класса:" в начале.
 Пример:
-class City {
+class City 
+{
 private: 
-    std::vector<Citizen*> people;
-    std::string title;
-
+        std::vector<Citizen*> people;
+        std::string title;
 public:
-    City(std::string title_ );
-
-    std::string GetTitle();
-
-    void print();
-
-    void AddResident(Citizen* person);
+        City(std::string title_ );
+        std::string GetTitle();
+        void print();
+        void AddResident(Citizen* person);
 }; 
 City::City(std::string title_) : title(title_) {
 }
-
 std::string City::GetTitle() {
-    return title;
+        return title;
 }
-
 void City::print() {
-    for (const Citizen* person : people) {
-        person->print(); // <=> (*person).print();
-    }
+        for (const Citizen* person : people) {
+                person->print(); // <=> (*person).print();
+        }
 }
 
 void City::AddResident(Citizen *person) {
-    people.push_back(person);
-    person->SetHome(this); // <-- поговорим потом
+        people.push_back(person);
+        person->SetHome(this); // <-- поговорим потом
 }
